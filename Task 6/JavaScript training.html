@@ -1,0 +1,104 @@
+<html>
+
+<body>
+<script>
+
+
+
+function fun1(){
+
+let arr = [];
+let ind = 0;
+
+for(let i = 0; i < 101; i++){
+
+arr.push(i);
+if(arr[ind] % 3 == 0){
+console.log("Element " , i , " = ",arr.pop()); 
+ind -= 1;
+}
+
+ind += 1;
+
+}
+}
+
+
+function fun2(){
+
+let arr = [];
+
+for(let i = 0; i < 101; i++)
+arr.push(i);
+
+for(let i = 101; i < 151; i++)
+arr.push(i);
+
+console.log(arr);
+}
+
+
+function fun3(){
+
+let arr = [];
+
+for(let i = 0; i < 101; i++)
+arr.push(i);
+
+
+for(let i = 0; i < 101; i++)
+arr[i] += 3;
+
+
+
+console.log(arr);
+}
+
+
+function fun4(){
+
+let arr = [];
+
+for(let i = 0; i < 101; i++)
+arr.push(i);
+
+for(let i = 20; i < 41; i++)
+console.log("Element " , i , " = ",arr[i]);
+}
+
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+function fun5(){
+
+let arr = [];
+
+for(let i = 0; i < 101; i++)
+arr.push(i);
+
+shuffleArray(arr);
+console.log("Shuflled array: " , arr);
+arr.sort((a, b) => a - b);
+arr.reverse();
+console.log("Reversed array: " , arr);
+
+}
+
+
+</script>
+
+<button onclick="fun1()">button 1</button>
+<button onclick="fun2()">button 2</button>
+<button onclick="fun3()">button 3</button>
+<button onclick="fun4()">button 4</button>
+<button onclick="fun5()">button 5</button>
+
+</body>
+
+</html>
