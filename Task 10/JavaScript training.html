@@ -1,0 +1,21 @@
+<html>
+
+<body>
+<script>
+
+function get_ip() {
+    fetch("https://api.ipify.org/")
+        .then(response => response.text())
+        .then(ipAddress => {
+            document.getElementById("Button").innerHTML = ipAddress;
+        })
+        
+}
+
+</script>
+
+<button id = "Button" , onclick = "get_ip()">Get IP</button>
+
+</body>
+
+</html>
